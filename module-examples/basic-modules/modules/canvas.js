@@ -1,6 +1,6 @@
 function create(id, parent, width, height) {
-  let divWrapper = document.createElement('div');
-  let canvasElem = document.createElement('canvas');
+  let divWrapper = document.createElement("div");
+  let canvasElem = document.createElement("canvas");
   parent.appendChild(divWrapper);
   divWrapper.appendChild(canvasElem);
 
@@ -8,17 +8,17 @@ function create(id, parent, width, height) {
   canvasElem.width = width;
   canvasElem.height = height;
 
-  let ctx = canvasElem.getContext('2d');
+  let ctx = canvasElem.getContext("2d");
 
   return {
     ctx: ctx,
-    id: id
+    id: id,
   };
 }
 
 function createReportList(wrapperId) {
-  let list = document.createElement('ul');
-  list.id = wrapperId + '-reporter';
+  let list = document.createElement("ul");
+  list.id = wrapperId + "-reporter";
 
   let canvasWrapper = document.getElementById(wrapperId);
   canvasWrapper.appendChild(list);
